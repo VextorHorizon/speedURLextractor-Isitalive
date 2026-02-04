@@ -1,25 +1,25 @@
-# 🌐 URL Tools: Extractor & Checker
+# URL Tools: Extractor & Checker
 
 A professional Golang toolkit to **extract URLs** from websites and **verify their status**. Designed for performance, safety, and ease of use.
 
-> **🛡️ Safety First:** This tool automatically respects `robots.txt` rules to ensure ethical crawling and prevent IP bans.
+> **Safety First:** This tool automatically respects `robots.txt` rules to ensure ethical crawling and prevent IP bans.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 url-extractor/
 ├── cmd/
-│   ├── url-extractor/   # 📥 Tool: Extract URLs from HTML
+│   ├── url-extractor/   # Tool: Extract URLs from HTML
 │   │   └── main.go
-│   └── url-checker/     # 🧪 Tool: Check if URLs are online
+│   └── url-checker/     # Tool: Check if URLs are online
 │       └── main.go
 ├── src/
 │   ├── extractor/       # Extraction logic
 │   ├── fetcher/         # HTTP request handling
 │   ├── checker/         # Status checking logic
-│   ├── robots/          # 🤖 Robots.txt compliance engine
+│   ├── robots/          # Robots.txt compliance engine
 │   └── models/          # Shared data structures
 ├── urldata/             # Directory for saving JSON results
 ├── go.mod               # Go module definition
@@ -28,7 +28,7 @@ url-extractor/
 
 ---
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
 ### Step 1: Installation
 Open your terminal and build the tools:
@@ -59,19 +59,19 @@ Feed the result file into the checker to see which links are broken.
 
 ---
 
-## ⚡ Key Features
+## Key Features
 
 | Feature | Description |
 | :--- | :--- |
-| **🔍 Smart Extraction** | Finds links in `href` and `src`, converting relative paths to absolute ones. |
-| **🛡️ Ethical Crawling** | Checks `robots.txt` before every request. Caches rules to protect servers. |
-| **🚀 High Performance** | Uses Go concurrency to check hundreds of URLs in seconds. |
-| **🧹 Clean Output** | Produces strict JSON for easy integration with other tools. |
-| **📊 Visual Reports** | Color-coded CLI output makes it easy to spot errors and broken links. |
+| **Smart Extraction** | Finds links in `href` and `src`, converting relative paths to absolute ones. |
+| **Ethical Crawling** | Checks `robots.txt` before every request. Caches rules to protect servers. |
+| **High Performance** | Uses Go concurrency to check hundreds of URLs in seconds. |
+| **Clean Output** | Produces strict JSON for easy integration with other tools. |
+| **Visual Reports** | Color-coded CLI output makes it easy to spot errors and broken links. |
 
 ---
 
-## 📖 Advanced Usage
+## Advanced Usage
 
 ### Customizing the Checker
 You can control how fast the checker works to avoid overloading servers.
@@ -93,7 +93,7 @@ The extractor prints strict JSON to **Standard Output (stdout)** and logs/errors
 
 ---
 
-## 📊 JSON Output Format
+## JSON Output Format
 The extractor produces JSON in the following format:
 
 ```json
@@ -109,13 +109,13 @@ The extractor produces JSON in the following format:
 
 ---
 
-## 📋 Requirements
+## Requirements
 - **Go 1.21** or higher installed.
 - Internet connection for fetching and checking live URLs.
 
 ---
 
-## ❓ FAQ
+## FAQ
 
 **Q: Why does it say "disallowed by robots.txt"?**
 A: The tool respects the website's rules. If a site owner blocks crawlers from a specific path (e.g., `/admin`), this tool will skip it to keep you safe from bans.
