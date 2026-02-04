@@ -99,6 +99,15 @@ Use the checker to see which of those extracted URLs are actually working.
 
 ---
 
+## 🛡️ Safety & Ethical Scraping
+This toolkit is designed with responsibility in mind:
+
+- **Robots.txt Compliance**: Both tools automatically check for `robots.txt` before making requests. If a path is disallowed for crawlers, the tools will skip it to respect the site owner's wishes.
+- **Smart Caching**: The `robots.txt` data is cached in memory per domain during a session, ensuring we don't spam the server with repeated policy requests.
+- **Customizable Concurrency**: The Checker allows you to control the load on the target server. Please use a reasonable number of workers (e.g., 5-10) to avoid being mistaken for a DDoS attack.
+
+---
+
 ## 📊 JSON Output Format
 The extractor produces JSON in the following format:
 
