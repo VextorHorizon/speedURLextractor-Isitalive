@@ -1,6 +1,25 @@
 # URL Extractor
 
-A simple Golang tool to extract all URLs from a given webpage and output them as JSON.
+A Golang tool to extract all URLs from a given webpage and output them as JSON.
+
+## Project Structure
+
+```
+url-extractor/
+├── cmd/
+│   └── url-extractor/
+│       └── main.go      # Entry point
+├── src/
+│   ├── extractor/       # URL extraction logic
+│   │   └── extractor.go
+│   ├── fetcher/         # HTTP content fetching
+│   │   └── fetcher.go
+│   └── models/          # Data structures
+│       └── models.go
+├── urldata/             # Directory for JSON results
+├── go.mod               # Go module file
+└── README.md            # Documentation
+```
 
 ## Features
 
@@ -10,37 +29,38 @@ A simple Golang tool to extract all URLs from a given webpage and output them as
 - ✅ Resolves relative URLs to absolute URLs
 - ✅ Removes duplicate URLs
 - ✅ Outputs results as formatted JSON
+- ✅ Clean architecture with `cmd/` and `src/` separation
 
 ## Installation
 
 ```bash
-go build -o url-extractor main.go
+# Build the executable
+go build -o url-extractor.exe ./cmd/url-extractor
 ```
 
 ## Usage
 
 ```bash
 # Run directly with go
-go run main.go <URL>
+go run ./cmd/url-extractor/main.go <URL>
 
 # Or use the built binary
-./url-extractor <URL>
+./url-extractor.exe <URL>
 ```
 
 ### Examples
 
 ```bash
 # Extract URLs from a website
-go run main.go https://example.com
+go run ./cmd/url-extractor/main.go https://example.com
 
-# Save output to file
-go run main.go https://example.com > output.json 2>/dev/null
+# Save output to urldata directory
+go run ./cmd/url-extractor/main.go https://example.com > urldata/example.json 2>urldata/error.log
 ```
 
 ## Output Format
 
 ```json
-{
   "source_url": "https://example.com",
   "extracted_urls": [
     "https://example.com/page1",
