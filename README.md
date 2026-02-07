@@ -1,4 +1,4 @@
-# URL Tools: Extractor & Checker
+# URL Tools: Extractor & Website Health Checker
 
 A professional Golang toolkit to **extract URLs** from websites and **verify their status**. Designed for performance, safety, and ease of use.
 
@@ -122,3 +122,4 @@ A: The tool respects the website's rules. If a site owner blocks crawlers from a
 
 **Q: Can I check thousands of URLs?**
 A: Yes! The checker is built for speed. Just be mindful of the `workers` setting so you don't accidentally attack a server (DDoS).
+
